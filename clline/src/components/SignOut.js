@@ -1,6 +1,6 @@
-import { Button } from '@mui/material'
+import { Button } from '@mui/material';
 import {auth} from "../firebase.js";
-import React from 'react'
+import React from 'react';
 
 function SignOut() {
   return (
