@@ -26,6 +26,13 @@ function SendMessage() {
         <form onSubmit={sendMessage}>
             <div className='sendMessage'>
                 <Input
+                    style={{
+                        width: "78%",
+                        fontSize: "15px",
+                        fontWeight: "550",
+                        marginLeft: "5px",
+                        marginBottom: "-3px",
+                    }}
                     placeholder="メッセージを入力" 
                     type="text" 
                     onChange={(e) => setMessage(e.target.value)}
