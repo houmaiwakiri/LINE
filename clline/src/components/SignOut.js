@@ -4,8 +4,11 @@ import React from 'react';
 
 function SignOut() {
   return (
-    <div>
-        <Button onClick={() => auth.signOut()} >サインアウト</Button>
+    <div className='header'>
+        <Button 
+        style ={{color:"white" ,fontsize: "15px"}}
+        onClick={() => auth.signOut()} >サインアウト</Button>
+        <h3>{auth.currentUser.displayName}</h3>
     </div>
   )
 }
