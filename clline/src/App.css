@@ -1,3 +1,9 @@
+html { 
+  scroll-behavior: smooth;
+}
+a{
+  text-decoration: none;
+}
 body {
   background-color: #93aad4;
   margin: 0;
@@ -24,7 +30,7 @@ img {
   border: 2px solid black;
 }
 
-p {
+p :not(#p_newmsg #p_newmsg_style) {
   font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Oxygen,
     Ubuntu, Cantarell, "Open Sans", "Helvetica Neue", sans-serif;
   font-weight: 500;
@@ -80,6 +86,16 @@ p {
   display: flex;
   flex-direction: column;
 }
+#p_newmsg_style{
+  text-align: center;
+}
+#p_newmsg{
+  height: 0px;
+  width: 0;
+  margin: 0;
+  padding: 0;
+
+}
 
 @media (max-width: 775px) {
   p {
@@ -94,6 +110,9 @@ p {
   img {
     height: 35px;
     margin-top: -10px;
+  }
+  .message {
+    margin: 10px;
   }
 }
 
@@ -110,5 +129,8 @@ p {
   img {
     height: 30px;
     margin-top: -7px;
+  }
+  .message {
+    margin: 10px;
   }
 }

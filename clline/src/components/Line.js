@@ -18,6 +18,7 @@ function Line() {
       {console.log(messages)}
       < SignOut/>
       <div className='messages'>
+        <div><p id="p_newmsg_style"><a href="#newmsg">最新のメッセージを表示</a></p></div>
         {messages.map(({id, text ,photoURL, uid}) => (
           <div>
             <div key={id}
@@ -28,6 +29,8 @@ function Line() {
             </div>
           </div>
         ))}
+        {/** ページ内遷移用*/}
+        <p id='p_newmsg'><span id="newmsg"></span></p>
       </div>
       <SendMessage />
     </div>

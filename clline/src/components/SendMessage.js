@@ -37,7 +37,7 @@ function SendMessage() {
                     type="text" 
                     onChange={(e) => setMessage(e.target.value)}
                     value = {message} />
-                    <SendIcon style={{ color: "#7AC2FF", marginLeft: "20px" }} />
+                    <SendIcon onClick={sendMessage} style={{ color: "#7AC2FF", marginLeft: "20px" }} />
             </div>
         </form>
     </div>
