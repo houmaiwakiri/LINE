@@ -2,7 +2,8 @@ import React, { useState } from 'react'
 import firebase from "firebase/compat/app";
 import {db, auth} from "../firebase.js";
 import SendIcon from "@mui/icons-material/Send";
-import { Input } from '@mui/material';
+import { Button, Input } from '@mui/material';
+import Stamp from "./Stamp";
 
 
 
@@ -21,6 +22,12 @@ function SendMessage() {
         });
         setMessage("");
     }
+    function stamp(){
+        console.log("gogo");
+        return(
+            <Stamp></Stamp>
+        )
+    }
   return (
     <div>
         <form onSubmit={sendMessage}>
@@ -36,8 +43,10 @@ function SendMessage() {
                     placeholder="メッセージを入力" 
                     type="text" 
                     onChange={(e) => setMessage(e.target.value)}
-                    value = {message} />
-                    <SendIcon onClick={sendMessage} style={{ color: "#7AC2FF", marginLeft: "20px" }} />
+                    value = {message} 
+                />
+                <SendIcon onClick={sendMessage} style={{ color: "#7AC2FF", marginLeft: "20px" }} />
+                <Button onClick={stamp}>スタンプ</Button>
             </div>
         </form>
     </div>
