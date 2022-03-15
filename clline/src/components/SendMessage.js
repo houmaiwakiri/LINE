@@ -3,9 +3,7 @@ import firebase from "firebase/compat/app";
 import {db, auth} from "../firebase.js";
 import SendIcon from "@mui/icons-material/Send";
 import { Button, Input } from '@mui/material';
-import Stamp from "./Stamp";
-
-
+import Stamp from './Stamp.js';
 
 function SendMessage() {
     const [message, setMessage] = useState("");
@@ -23,11 +21,12 @@ function SendMessage() {
         setMessage("");
     }
     function stamp(){
-        console.log("gogo");
-        return(
-            <Stamp></Stamp>
-        )
+        <div>
+            <Stamp />
+        </div>
+        console.log("tanomu");
     }
+
   return (
     <div>
         <form onSubmit={sendMessage}>
