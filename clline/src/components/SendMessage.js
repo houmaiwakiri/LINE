@@ -2,8 +2,7 @@ import React, { useState } from 'react'
 import firebase from "firebase/compat/app";
 import {db, auth} from "../firebase.js";
 import SendIcon from "@mui/icons-material/Send";
-import { Button, Input } from '@mui/material';
-import Stamp from './Stamp.js';
+import { Input } from '@mui/material';
 
 function SendMessage() {
     const [message, setMessage] = useState("");
@@ -19,12 +18,6 @@ function SendMessage() {
             createdAt: firebase.firestore.FieldValue.serverTimestamp(),
         });
         setMessage("");
-    }
-    function stamp(){
-        <div>
-            <Stamp />
-        </div>
-        console.log("tanomu");
     }
 
   return (
@@ -45,7 +38,6 @@ function SendMessage() {
                     value = {message} 
                 />
                 <SendIcon onClick={sendMessage} style={{ color: "#7AC2FF", marginLeft: "20px" }} />
-                <Button onClick={stamp}>スタンプ</Button>
             </div>
         </form>
     </div>

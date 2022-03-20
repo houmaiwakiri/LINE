@@ -2,6 +2,7 @@ import React, { useEffect, useState } from 'react';
 import SignOut from './SignOut';
 import {auth, db} from "../firebase.js";
 import SendMessage from './SendMessage';
+import { Button } from '@mui/material';
 
 function Line() {
   const [messages, SetMessages] = useState([]);
@@ -32,7 +33,10 @@ function Line() {
         {/** ページ内遷移用*/}
         <p id='p_newmsg'><span id="newmsg"></span></p>
       </div>
-      <SendMessage />
+      <SendMessage>
+        <Button id="app"></Button>
+      </SendMessage>
+
     </div>
   )
 }
