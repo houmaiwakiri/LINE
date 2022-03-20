@@ -1,0 +1,18 @@
+.popup-menu {
+    position: absolute;
+    z-index: 2;
+    transform: scale(0);
+    transform-origin: top left;
+    
+    width: 10rem;
+    margin-top: 0.5rem;
+    padding: 1rem;
+    background: #fff;
+    border-radius: 0.5rem;
+    
+    transition: transform 0.2s;
+    
+    &.shown {
+      transform: scale(1);
+    }
+  }

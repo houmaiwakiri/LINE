@@ -97,18 +97,25 @@ p :not(#p_newmsg #p_newmsg_style) {
 
 }
 
-.stamp{
-  position: fixed;
-  background-color: rgba(0, 0, 0, 2);
-  display: flex;
-  justify-content: center;
-  align-items: center;
-}
-.stamp_inner{
+.stamp_contrainer{
   position: relative;
 }
-.stamp_inner{
+.stamp_menu{
   position: absolute;
+  z-index: 2;
+  width: 10rem;
+  margin-top: 0.5rem;
+  padding: 1rem;
+  background: #fff;
+  border-radius: 0.5rem;
+
+  transform: scale(0);
+  transform-origin: top left;
+
+  transition: transform 0.2s;
+}
+.shown {
+  transform: scale(1);
 }
 
 
