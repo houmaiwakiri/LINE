@@ -1,12 +1,11 @@
 import React from 'react';
 import './App.css';
-import "./App.scss";
 import SignIn from './components/SignIn';
 import { useAuthState } from "react-firebase-hooks/auth";
 import {auth} from "./firebase.js";
 import Line from './components/Line';
 
-function App() {
+function MainApp() {
   const [user] = useAuthState(auth);
   return (
     <div>   
@@ -15,4 +14,4 @@ function App() {
   );
 }
 
-export default App;
+export default MainApp;

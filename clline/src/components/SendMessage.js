@@ -3,6 +3,7 @@ import firebase from "firebase/compat/app";
 import {db, auth} from "../firebase.js";
 import SendIcon from "@mui/icons-material/Send";
 import { Input } from '@mui/material';
+import { Button } from "@mui/material";
 
 function SendMessage() {
     const [message, setMessage] = useState("");
@@ -38,6 +39,7 @@ function SendMessage() {
                     value = {message} 
                 />
                 <SendIcon onClick={sendMessage} style={{ color: "#7AC2FF", marginLeft: "20px" }} />
+                <Button id="app">スタンプ</Button>
             </div>
         </form>
     </div>
